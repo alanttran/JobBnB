@@ -5,7 +5,6 @@ Find tech jobs within a 40 miles radius based on the Dice API
 ## Demo
 
 * [https://alanttran.github.io/JobBnB/](https://alanttran.github.io/JobBnB/) 
-### Installing
 
 ## Built With
 
@@ -13,12 +12,25 @@ Find tech jobs within a 40 miles radius based on the Dice API
 * [Dice API](http://www.dice.com/common/content/util/apidoc/jobsearch.html) - Job Search API
 * [Google Maps API](https://developers.google.com/maps/) - Maps API
 
+## Project Requirements
+
+* Must use at least two APIs
+* Must use AJAX to pull data
+* Must utilize at least one new library or technology that we haven’t discussed
+* Must have a polished frontend / UI
+* Must meet good quality coding standards (indentation, scoping, naming)
+* Must NOT use alerts, confirms, or prompts (look into modals!)
+* Must have some sort of repeating element (table, columns, etc)
+* Must use Bootstrap or Alternative CSS Framework
+* Must be Deployed (GitHub Pages or Firebase)
+* Must have User Input Validation
+
 ## Authors
 
 * **Alan Tran** - *PM and front-end* - [alanttran](https://github.com/alanttran)
+* **Anna B Faizi** - *front-end* - [annabfaizi](https://github.com/annabfaizi)
 * **David Shollings** - *javascript* - [Dshollings](https://github.com/Dshollings)
 * **Alex Himchak** - *javascript* - [AlexHimchak](https://github.com/AlexHimchak)
-* **Anna B Faizi** - *front-end* - [annabfaizi](https://github.com/annabfaizi)
 
 See also the list of [contributors](https://github.com/alanttran/JobBnB/graphs/contributors) who participated in this project.
 
