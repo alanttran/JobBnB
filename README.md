@@ -21,8 +21,8 @@ Find tech jobs within a 40 miles radius based on the Dice API
 * Must meet good quality coding standards (indentation, scoping, naming)
 * Must NOT use alerts, confirms, or prompts (look into modals!)
 * Must have some sort of repeating element (table, columns, etc)
-* Must use Bootstrap or Alternative CSS Framework
-* Must be Deployed (GitHub Pages or Firebase) ✔
+✔ Must use Bootstrap or Alternative CSS Framework
+✔ Must be Deployed (GitHub Pages or Firebase) 
 * Must have User Input Validation
 
 ## Authors
