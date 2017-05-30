@@ -1,5 +1,6 @@
 
 
+
 var zip = $("#zip-input");
 var searchTerm = $("#search-term");
 
@@ -51,4 +52,3 @@ function initMap() {
         title: 'Hello World!'
     });
 }
-
