@@ -1,97 +1,40 @@
-
-.portfolio-header {
-  position: relative;
-  background-image: url(images/header-bg.jpg);
+html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
 }
-
-.portfolio-header .mdl-layout__header-row {
-  padding: 0;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.mdl-layout__title {
-  font-size: 14px;
-  text-align: center;
-  font-weight: 300;
-}
-
-.is-compact .mdl-layout__title span {
-  display: none;
-}
-
-.portfolio-logo-row {
-  min-height: 200px;
-}
-
-.is-compact .portfolio-logo-row {
-  min-height: auto;
-}
-
-.portfolio-logo {
-  background: url(images/logo.png) 50% no-repeat;
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  margin: auto auto 10px;
-}
-
-.is-compact .portfolio-logo {
-  height: 50px;
-  width: 50px;
-  margin-top: 7px;
-}
-
-.portfolio-max-width {
-  max-width: 900px;
-  margin: auto;
-}
-
-.portfolio-copy {
-  max-width: 700px;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.no-left-padding{
-  padding-left: 0;
-}
-
-.no-bottom-padding {
-  padding-bottom: 0;
-}
-
-.padding-top {
-  padding: 10px 0 0;
-}
-
-.portfolio-share-btn {
-  position: relative;
-  float: right;
-  top: -4px;
-}
-
-.demo-card-event > .mdl-card__actions {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    box-sizing: border-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-}
-
-.portfolio-contact .mdl-textfield {
+.jbnb-map-dimensions{
   width: 100%;
+  min-height: 100%;
+}
+.jbnb-hero-container{
+  background-image: url('https://ikhzasag.edu.mn/mn/wp-content/uploads/2015/03/fa-banner-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.jbnb-search-container{
+  flex: 0 0 auto;
+  width: 550px;
 }
 
-.portfolio-contact form {
-  max-width: 550px;
-  margin: auto;
+.jbnb-zip-code-field {
+  width: 100px;
 }
+.jbnb-header-container{
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
+  
+}
+.jbnb-header-container h1{
+  font-family: 'Playfair Display', serif;
+}
+
 
 footer {
   background-image: url(images/footer-background.png);
@@ -100,15 +43,19 @@ footer {
   padding: 20px;
 }
 
-html,
-      body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-      }
 
-      #map {
-          height: 50%;
-          width: 50%;
-      }
 
+/* material design overrides*/
+.mdl-data-table{
+  width: 100%;
+}
+.mdl-textfield__label{
+  color: black;
+}
+.mdl-textfield__input{
+  color: black;
+  border-bottom-color: black;
+}
+.mdl-textfield{
+  margin-right: 15px;
+}
