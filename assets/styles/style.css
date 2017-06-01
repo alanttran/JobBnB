@@ -8,7 +8,7 @@ html, body {
   min-height: 100%;
 }
 .jbnb-hero-container{
-  background-image: url('https://ikhzasag.edu.mn/mn/wp-content/uploads/2015/03/fa-banner-background.jpg');
+  background-image: url('../images/fa-banner-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;

@@ -52,3 +52,16 @@ function initMap() {
         title: 'Hello World!'
     });
 }
+
+$('#user-search-button').on('click', function(event){
+  event.preventDefault();
+  var userJobTitle = $('#user-job-title').val();
+  var userZipCode = $('#user-zip-code').val();
+
+  // checks to see if there is content in both felds
+  if(userJobTitle.length > 0 && userZipCode > 0){
+    console.log("Job Title: " + userJobTitle + " Zip Code: " + userZipCode);
+    // other code here
+  }
+  
+})
