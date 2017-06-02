@@ -36,7 +36,7 @@ function jobSearch(myLocation, searchTerm) {
       dataType: 'jsonp',
       type: 'GET',
       timeout: 5000,
-      url: 'http://api.indeed.com/ads/apisearch'
+      url: 'https://api.indeed.com/ads/apisearch'
     })
     .done(function(searchTerm) {
       $.each(searchTerm.results, function(i, item) {
