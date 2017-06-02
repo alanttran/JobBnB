@@ -1,6 +1,6 @@
 # JobBnB
 
-Find tech jobs within a 40 miles radius based on the Dice API
+Find tech jobs within a 40 miles radius based on the Indeed API
 
 ## Demo
 
@@ -9,21 +9,22 @@ Find tech jobs within a 40 miles radius based on the Dice API
 ## Built With
 
 * [Material Design Lite](https://getmdl.io/) - The web framework used
-* [Dice API](http://www.dice.com/common/content/util/apidoc/jobsearch.html) - Job Search API
+* [Indeed API](https://market.mashape.com/indeed/indeed) - Job Search API
 * [Google Maps API](https://developers.google.com/maps/) - Maps API
+* [ipinfo API](https://ipinfo.io) - IP Location API
 
 ## Project Requirements
 
 * Must use at least two APIs ✔
 * Must use AJAX to pull data ✔
-* Must utilize at least one new library or technology that we haven’t discussed
+* Must utilize at least one new library or technology that we haven’t discussed ✔
 * Must have a polished frontend / UI ✔
 * Must meet good quality coding standards (indentation, scoping, naming) ✔
 * Must NOT use alerts, confirms, or prompts (look into modals!) ✔
-* Must have some sort of repeating element (table, columns, etc)
+* Must have some sort of repeating element (table, columns, etc) ✔
 * Must use Bootstrap or Alternative CSS Framework ✔
 * Must be Deployed (GitHub Pages or Firebase) ✔
-* Must have User Input Validation
+* Must have User Input Validation ✔
 
 ## Authors
 

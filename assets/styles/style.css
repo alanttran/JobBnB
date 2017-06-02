@@ -1,11 +1,67 @@
-html,
-      body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-      }
+html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+}
+.jbnb-map-dimensions{
+  width: 100%;
+  min-height: 100%;
+}
+.jbnb-hero-container{
+  background-image: url('../images/fa-banner-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.jbnb-search-container{
+  flex: 0 0 auto;
+  width: 550px;
+}
 
-      #map {
-          height: 50%;
-          width: 50%;
-      }
+.jbnb-zip-code-field {
+  width: 100px;
+}
+.jbnb-header-container{
+  flex: 0 0 auto;
+  width: 100%;
+  text-align: center;
+  
+}
+.jbnb-header-container h1{
+  font-family: 'Playfair Display', serif;
+}
+.jbnb-white-image{
+  width: 100%;
+}
+
+
+footer {
+  background-image: url(images/footer-background.png);
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+/* material design overrides*/
+.mdl-data-table{
+  width: 100%;
+}
+.mdl-textfield__label{
+  color: black;
+}
+.mdl-textfield__input{
+  color: black;
+  border-bottom-color: black;
+}
+.mdl-textfield{
+  margin-right: 15px;
+}
+.mdl-dialog{
+  width: 350px;
+}
