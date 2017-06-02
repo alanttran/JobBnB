@@ -1,3 +1,4 @@
+
 var zip;
 var search;
 var map;
@@ -13,6 +14,10 @@ $("#user-search-button").click(function(event) {
 
   jobSearch(zip, search);
 });
+
+
+var zip = $("#zip-input");
+var searchTerm = $("#search-term");
 
 
 
@@ -65,10 +70,12 @@ function jobSearch(myLocation, search) {
 }
 
 
+
 jobSearch(zip, search);
 
 
   function initMap() {
+});  
 
     if (initialMapP === 0){
       var myLatLng = {lat: 32.7157, lng: -117.1611};
@@ -126,4 +133,23 @@ jobSearch(zip, search);
    });
    }
 }
+
+
+$('#user-search-button').on('click', function(event){
+  event.preventDefault();
+  var userJobTitle = $('#user-job-title').val();
+  var userZipCode = $('#user-zip-code').val();
+
+  // checks to see if there is content in both felds
+  if(userJobTitle.length > 0 && userZipCode > 0){
+    console.log("Job Title: " + userJobTitle + " Zip Code: " + userZipCode);
+    // other code here
+  }
+  
+})
+
+$.getJSON('https://ipinfo.io', function(data){
+  console.log(data);
+  $('#user-zip-code').val(data.postal);
+});
 

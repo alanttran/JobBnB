@@ -11,6 +11,7 @@ Find tech jobs within a 40 miles radius based on the Indeed API
 * [Material Design Lite](https://getmdl.io/) - The web framework used
 * [Indeed API](https://market.mashape.com/indeed/indeed) - Job Search API
 * [Google Maps API](https://developers.google.com/maps/) - Maps API
+* [ipinfo API](https://ipinfo.io) - IP Location API
 
 ## Project Requirements
 
