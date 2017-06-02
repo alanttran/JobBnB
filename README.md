@@ -1,6 +1,6 @@
 # JobBnB
 
-Find tech jobs within a 40 miles radius based on the Dice API
+Find tech jobs within a 40 miles radius based on the Indeed API
 
 ## Demo
 
@@ -16,7 +16,7 @@ Find tech jobs within a 40 miles radius based on the Dice API
 
 * Must use at least two APIs ✔
 * Must use AJAX to pull data ✔
-* Must utilize at least one new library or technology that we haven’t discussed
+* Must utilize at least one new library or technology that we haven’t discussed ✔
 * Must have a polished frontend / UI ✔
 * Must meet good quality coding standards (indentation, scoping, naming) ✔
 * Must NOT use alerts, confirms, or prompts (look into modals!) ✔
