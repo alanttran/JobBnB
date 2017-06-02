@@ -1,11 +1,9 @@
-
-var zip;
-var search;
+var zip = $("#zip-input");
+var searchTerm = $("#search-term");
 var map;
 var latitude = [];
 var long = [];
 var initialMapP = 0;
-
 
 $("#user-search-button").click(function(event) {
   event.preventDefault();
@@ -16,19 +14,14 @@ $("#user-search-button").click(function(event) {
 });
 
 
-var zip = $("#zip-input");
-var searchTerm = $("#search-term");
-
-
-
-function jobSearch(myLocation, search) {
+function jobSearch(myLocation, searchTerm) {
   $.ajax({
       cache: false,
       data: $.extend({
         publisher: '4604260559721605',
         v: '2',
         format: 'json',
-        q: search,
+        q: searchTerm,
         l: myLocation,
         radius: 25,
         limit: 10,
@@ -63,50 +56,16 @@ function jobSearch(myLocation, search) {
           var templong = parseFloat(item.longitude)
           long.push(templong);
           console.log(long)
-          $("#joblist").prepend('<tr><td class="mdl-data-table__cell--non-numeric">'+item.jobtitle+'</td><td class="mdl-data-table__cell--non-numeric">'+item.company+'</td><td class="mdl-data-table__cell--non-numeric">'+item.formattedLocation+'</td><td class="mdl-data-table__cell--non-numeric"><a href='+item.url+'>"View Listing"</td></tr>')
+          
+      
       });
       initMap();
     });
 }
 
 
+//jobSearch(92129, "janitor");
 
-jobSearch(zip, search);
-
-
-  function initMap() {
-});  
-
-    if (initialMapP === 0){
-      var myLatLng = {lat: 32.7157, lng: -117.1611};
-      initialMapP++;
-    }
-    else {
-  
-    var myLatLng = {lat: latitude[0], lng: long[0]};
-  }
-    var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 9,
-          center: myLatLng
-      });
-    
-     for (var i = 0; i < latitude.length; i++) {
-      myLatLng = {lat: latitude[i], lng: long[i]};
-     var marker = new Marker({
-            position: new google.maps.myLatLng,
-            map: map,
-            icon: {
-             path: SQUARE_PIN,
-             fillColor: '#00CCBB',
-             fillOpacity: 1,
-             strokeColor: '',
-             strokeWeight: 0
-            },
-          map_icon_lable: '<span class="map-icon map-icon-square-pin"></span>'
-        
-   });
-   }
-}
   function initMap() {
 
     if (initialMapP === 0){
@@ -123,7 +82,7 @@ jobSearch(zip, search);
       });
     
      for (var i = 0; i < latitude.length; i++) {
-      myLatLng = {lat: latitude[i], lng: long[i]};
+        myLatLng = {lat: latitude[i], lng: long[i]};
      var marker = new google.maps.Marker({
            position: myLatLng,
            map: map,
@@ -134,19 +93,6 @@ jobSearch(zip, search);
    }
 }
 
-
-$('#user-search-button').on('click', function(event){
-  event.preventDefault();
-  var userJobTitle = $('#user-job-title').val();
-  var userZipCode = $('#user-zip-code').val();
-
-  // checks to see if there is content in both felds
-  if(userJobTitle.length > 0 && userZipCode > 0){
-    console.log("Job Title: " + userJobTitle + " Zip Code: " + userZipCode);
-    // other code here
-  }
-  
-})
 
 $.getJSON('https://ipinfo.io', function(data){
   console.log(data);
