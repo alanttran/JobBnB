@@ -6,6 +6,7 @@ $("#user-search-button").click(function(event) {
         jobSearch(zip, search);
     });
 
+// http://api.indeed.com/ads/apisearch?publisher=4604260559721605&v=2&q=java&format=json
 function jobSearch(myLocation, searchTerm) {
         $.ajax({
                 cache: false,
@@ -28,10 +29,11 @@ function jobSearch(myLocation, searchTerm) {
                 dataType: 'jsonp',
                 type: 'GET',
                 timeout: 5000,
-                url: 'http://api.indeed.com/ads/apisearch'
+                url: 'https://cors.now.sh/http://api.indeed.com/ads/apisearch'
             })
             .done(function(searchTerm) {
                 $.each(searchTerm.results, function(i, item) {
+                	console.log()
                     console.log(item);
                     console.log(item.jobtitle);
                     console.log(item.company);
