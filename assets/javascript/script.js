@@ -4,8 +4,16 @@ var map;
 var latitude = [];
 var long = [];
 var initialMapP = 0;
+var jobs = [];
 
-//jobSearch(92129, "janitor")
+$("#user-search-button").click(function(event) {
+    event.preventDefault();
+    var zip = $('#user-zip-code').val();
+    var search = $('#user-job-title').val();
+
+    jobSearch(zip, search);
+});
+
 initMap();
 
 function initMap() {
@@ -29,7 +37,15 @@ function initMap() {
             map: map,
 
             title: 'Hello World!'
-
+        });
+        marker.addListener('click', function() {
+            map.setZoom(10);
+            map.setCenter(marker.getPosition());
+            var infowindow = new google.maps.InfoWindow({
+                content: "Here's a job"
+            });
+            infowindow.open(marker.get('map'), marker);
         });
     }
+
 }

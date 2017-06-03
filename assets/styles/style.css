@@ -6,6 +6,7 @@ html, body {
 .jbnb-map-dimensions{
   width: 100%;
   min-height: 100%;
+
 }
 .jbnb-hero-container{
   background-image: url('../images/fa-banner-background.jpg');
@@ -36,6 +37,10 @@ html, body {
 }
 .jbnb-white-image{
   width: 100%;
+}
+.jbnb-table{
+  max-height: 700px;
+  overflow: auto;
 }
 
 
