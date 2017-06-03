@@ -6,14 +6,6 @@ var long = [];
 var initialMapP = 0;
 var jobs = [];
 
-$("#user-search-button").click(function(event) {
-    event.preventDefault();
-    var zip = $('#user-zip-code').val();
-    var search = $('#user-job-title').val();
-
-    jobSearch(zip, search);
-});
-
 initMap();
 
 function initMap() {

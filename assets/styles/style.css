@@ -40,7 +40,9 @@ html, body {
 }
 .jbnb-table{
   max-height: 700px;
-  overflow: auto;
+  width: 100%;
+  overflow-y: auto;
+  table-layout: fixed;
 }
 
 
@@ -54,9 +56,6 @@ footer {
 
 
 /* material design overrides*/
-.mdl-data-table{
-  width: 100%;
-}
 .mdl-textfield__label{
   color: black;
 }
@@ -69,4 +68,9 @@ footer {
 }
 .mdl-dialog{
   width: 350px;
+}
+.mdl-data-table__cell--non-numeric{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
