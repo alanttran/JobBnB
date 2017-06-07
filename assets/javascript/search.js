@@ -55,6 +55,7 @@ function jobSearch(myLocation, searchTerm) {
                 company: item.company,
                 // latitude: item.latitude, 
                 // longitude: item.longitude, 
+                snippet: item.snippet,
                 url: "<a href=" + item.url + " target='_blank'>Visit Job</a>",
                 age: item.formattedRelativeTime
             }
@@ -72,10 +73,13 @@ function jobSearch(myLocation, searchTerm) {
 function makeTable() {
 	console.log('maketable')
 	$("tbody").empty();
+	console.log(jobs);
     for (var i = 0; i < jobs.length; i++) {
         var row = $("<tr>");
         for (var propt in jobs[i]) {
-            row.append("<td>" + jobs[i][propt] + "</td>")
+        	if(propt !='snippet'){
+        		row.append("<td>" + jobs[i][propt] + "</td>")
+        	}
         }
         console.log('row', row);
         $("tbody").append(row);
