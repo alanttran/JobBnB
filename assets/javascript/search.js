@@ -22,6 +22,7 @@ function jobSearch(myLocation, searchTerm) {
             limit: 10,
             highlight: 1,
             filter: 1,
+            pageNumber: 2,
             latlong: 1,
         }, {
             start: 0,
@@ -33,6 +34,7 @@ function jobSearch(myLocation, searchTerm) {
         url: 'https://cors.now.sh/http://api.indeed.com/ads/apisearch'
     })
     .done(function(searchTerm) {
+    	console.log(searchTerm);
     	jobs = [];
     	$('.jbnb-results__number').text(searchTerm.totalResults);
         $.each(searchTerm.results, function(i, item) {
@@ -70,13 +72,14 @@ function jobSearch(myLocation, searchTerm) {
         initMap();
         console.log('done!')
         makeTable();
+        makePagination(searchTerm.totalResults);
     });
 }
 
 function makeTable() {
-	console.log('maketable')
+	//console.log('maketable')
 	$("tbody").empty();
-	console.log(jobs);
+	//console.log(jobs);
     for (var i = 0; i < jobs.length; i++) {
         var row = $("<tr>");
         for (var propt in jobs[i]) {
@@ -84,8 +87,18 @@ function makeTable() {
         		row.append("<td>" + jobs[i][propt] + "</td>")
         	}
         }
-        console.log('row', row);
+        //console.log('row', row);
         $("tbody").append(row);
         $("td").addClass("mdl-data-table__cell--non-numeric");
     };
 };
+
+function makePagination(totalResults){
+	console.log('make pagination!');
+	$('.jbnb-pagination').empty();
+	var paginationLength = Math.ceil(totalResults/10);
+	for(var i = 1; i < paginationLength; i++ ){
+		$('.jbnb-pagination').append("<div class = 'jbnb-pagination__item'>" + i + "</div>");
+	}
+	$('.jbnb-pagination > div:first-child').addClass('active');
+}

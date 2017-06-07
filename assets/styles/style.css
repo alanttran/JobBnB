@@ -65,6 +65,21 @@ html, body {
 .jbnb-table-column--post-age{
   width: 112px;
 }
+.jbnb-pagination{
+  margin-top: 15px;
+}
+.jbnb-pagination__item{
+  display: inline-block;
+  padding: 5px 10px;
+  
+  cursor: pointer;
+}
+.jbnb-pagination__item.active{
+  background: rgb(0,150,136);
+  color: white;
+  border-radius: 9px;
+}
+
 
 /* material design overrides*/
 .mdl-textfield__label{
