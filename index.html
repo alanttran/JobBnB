@@ -18,8 +18,8 @@
 <body>
     <div class="jbnb-hero-container">
         <div class="jbnb-header-container">
-            <h1>Jobs BnB</h1>
-            <h4>Search for any job based on the location you give us!</h4>
+            <h2>Jobs BnB</h2>
+            <h5>Search for any job based on the location you give us!</h5>
         </div>
         <div class="jbnb-search-container">
             <form action="#">
@@ -37,6 +37,7 @@
                 </button>
             </form>
         </div>
+        <div class="jbnb-results">Results: <span class="jbnb-results__number">0</span> job listings</div>
     </div>
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
@@ -46,10 +47,11 @@
             <table class="jbnb-table mdl-data-table mdl-js-data-table ">
                 <thead>
                     <tr>
-                        <th class="mdl-data-table__cell--non-numeric">Job Title</th>
-                        <th class="mdl-data-table__cell--non-numeric">Company</th>
-                        <th class="mdl-data-table__cell--non-numeric" style="width: 86px;">URL</th>
-                        <th class="mdl-data-table__cell--non-numeric" style="width: 150px;">Post Age</th>
+                        <th class="mdl-data-table__cell--non-numeric jbnb-table-column--job-title">Job Title</th>
+                        <th class="mdl-data-table__cell--non-numeric jbnb-table-column--company">Company</th>
+                        <th class="mdl-data-table__cell--non-numeric jbnb-table-column--url" >URL</th>
+                        <th class="mdl-data-table__cell--non-numeric 
+                        jbnb-table-column--post-age" >Post Age</th>
                     </tr>
                 </thead>
                 <tbody>

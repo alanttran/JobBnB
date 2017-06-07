@@ -4,6 +4,7 @@ $("#user-search-button").click(function(event) {
     var search = $('#user-job-title').val();
 
     jobSearch(zip, search);
+    $('.jbnb-results').show();
 });
 
 // http://api.indeed.com/ads/apisearch?publisher=4604260559721605&v=2&q=java&format=json
@@ -33,6 +34,7 @@ function jobSearch(myLocation, searchTerm) {
     })
     .done(function(searchTerm) {
     	jobs = [];
+    	$('.jbnb-results__number').text(searchTerm.totalResults);
         $.each(searchTerm.results, function(i, item) {
             // console.log(item);
             // console.log(item.jobtitle);
@@ -64,6 +66,7 @@ function jobSearch(myLocation, searchTerm) {
 
 
         });
+
         initMap();
         console.log('done!')
         makeTable();
