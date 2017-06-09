@@ -53,6 +53,7 @@ function jobSearch(myLocation, searchTerm) {
             var job = {
                 jobtitle: item.jobtitle,
                 company: item.company,
+                snippet: item.snippet,
                 // latitude: item.latitude, 
                 // longitude: item.longitude, 
                 url: "<a href=" + item.url + " target='_blank'>Visit Job</a>",
@@ -75,8 +76,10 @@ function makeTable() {
     for (var i = 0; i < jobs.length; i++) {
         var row = $("<tr>");
         for (var propt in jobs[i]) {
+            if(propt != 'snippet'){
             row.append("<td>" + jobs[i][propt] + "</td>")
-        }
+            }
+        }   
         console.log('row', row);
         $("tbody").append(row);
         $("td").addClass("mdl-data-table__cell--non-numeric");
