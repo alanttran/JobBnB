@@ -16,101 +16,113 @@
 </head>
 
 <body>
-    <div class="jbnb-hero-container">
-        <div class="jbnb-header-container">
-            <h2>Jobs BnB</h2>
-            <h5>Search for any job based on the location you give us!</h5>
+    <div class="jbnb-container">
+        <div class="jbnb-hero-container">
+            <div class="jbnb-header-container">
+                <h2>Jobs BnB</h2>
+                <h5>Search for any job based on the location you give us!</h5>
+            </div>
+            <div class="jbnb-search-container">
+                <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="user-job-title" autofocus>
+                        <label class="mdl-textfield__label" for="user-job-title">Job Title</label>
+                    </div>
+                    <div class="mdl-textfield jbnb-zip-code-field mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="user-zip-code">
+                        <label class="mdl-textfield__label" for="user-zip-code">Zip Code</label>
+                        <span class="mdl-textfield__error">Input is not a valid zip code!</span>
+                    </div>
+                    <button id="user-search-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                        Search
+                    </button>
+                </form>
+            </div>
+            <div class="jbnb-results">Results: <span class="jbnb-results__number">0</span> job listings</div>
         </div>
-        <div class="jbnb-search-container">
-            <form action="#">
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" id="user-job-title" autofocus>
-                    <label class="mdl-textfield__label" for="user-job-title">Job Title</label>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                <div id="map" class="jbnb-map-dimensions"></div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
+                <table class="jbnb-table mdl-data-table mdl-js-data-table ">
+                    <thead>
+                        <tr>
+                            <th class="mdl-data-table__cell--non-numeric jbnb-table-column--job-title">Job Title</th>
+                            <th class="mdl-data-table__cell--non-numeric jbnb-table-column--company">Company</th>
+                            <th class="mdl-data-table__cell--non-numeric jbnb-table-column--url">URL</th>
+                            <th class="mdl-data-table__cell--non-numeric 
+                        jbnb-table-column--post-age">Post Age</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td colspan="2"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="jbnb-pagination">
+                    <div class="jbnb-pagination__previous-jobs">
+                        <a href="#">
+                            < Previous Jobs </a>
+                    </div>
+                    <div class="jbnb-pagination__next-jobs"><a href="#">Next Jobs ></a></div>
                 </div>
-                <div class="mdl-textfield jbnb-zip-code-field mdl-js-textfield mdl-textfield--floating-label">
-                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="user-zip-code">
-                    <label class="mdl-textfield__label" for="user-zip-code">Zip Code</label>
-                    <span class="mdl-textfield__error">Input is not a valid zip code!</span>
-                </div>
-                <button id="user-search-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                    Search
-                </button>
-            </form>
-        </div>
-        <div class="jbnb-results">Results: <span class="jbnb-results__number">0</span> job listings</div>
-    </div>
-    <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
-            <div id="map" class="jbnb-map-dimensions"></div>
-        </div>
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet">
-            <table class="jbnb-table mdl-data-table mdl-js-data-table ">
-                <thead>
-                    <tr>
-                        <th class="mdl-data-table__cell--non-numeric jbnb-table-column--job-title">Job Title</th>
-                        <th class="mdl-data-table__cell--non-numeric jbnb-table-column--company">Company</th>
-                        <th class="mdl-data-table__cell--non-numeric jbnb-table-column--url" >URL</th>
-                        <th class="mdl-data-table__cell--non-numeric 
-                        jbnb-table-column--post-age" >Post Age</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="4"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="jbnb-pagination">
-            	<div class="jbnb-pagination__previous-jobs"><a href="#">< Previous Jobs </a></div>
-            	<div class="jbnb-pagination__next-jobs"><a href="#">Next Jobs ></a></div>
             </div>
         </div>
+        
     </div>
     <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-            <div class="mdl-logo">Team Overachievers</div>
-            <ul class="mdl-mini-footer__link-list">
-                <li><a href="https://github.com/alanttran/JobBnB"target="_blank">Github</a></li>
-                <li>&nbsp;</li>
-                <li>Alan Tran</li>
-                <li>Anna Faizi</li>
-                <li>David Shollings</li>
-                <li>Alex Himchak</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li>&nbsp;</li>
-                <li><span id="indeed_at"><a title="Job Search" href="https://www.indeed.com" rel="nofollow" >jobs by <img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif" style="border: 0; vertical-align: middle;"></a></span></li>
-            </ul>
-        </div>
-    </footer>
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">Team Overachievers</div>
+                <ul class="mdl-mini-footer__link-list">
+                    <li><a href="https://github.com/alanttran/JobBnB" target="_blank">Github</a></li>
+                    <li>&nbsp;</li>
+                    <li>Alan Tran</li>
+                    <li>Anna Faizi</li>
+                    <li>David Shollings</li>
+                    <li>Alex Himchak</li>
+                </ul>
+                <div class="jbnb-indeed-logo"><span id="indeed_at"><a title="Job Search" href="https://www.indeed.com" rel="nofollow" >jobs by <img alt=Indeed src="https://www.indeed.com/p/jobsearch.gif" style="border: 0; vertical-align: middle;"></a></span></div>
+            </div>
+        </footer>
     <dialog class="mdl-dialog">
         <h4 class="mdl-dialog__title">Adblock detected</h4>
         <div class="mdl-dialog__content">
@@ -132,6 +144,4 @@
 <script src="assets/javascript/ipinfo.js"></script>
 <script src="assets/javascript/search.js"></script>
 <script src="assets/javascript/script.js"></script>
-
-
 <script src="assets/javascript/map-icons.js"></script>

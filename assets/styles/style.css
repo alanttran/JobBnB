@@ -3,6 +3,9 @@ html, body {
       margin: 0;
       padding: 0;
 }
+.jbnb-container{
+  min-height: calc(100% - 136px);
+}
 .jbnb-map-dimensions{
   width: 100%;
   min-height: 529px;
@@ -12,6 +15,7 @@ html, body {
   background-image: url('../images/fa-banner-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 300px;
   display: flex;
   align-items: center;
@@ -70,7 +74,7 @@ html, body {
   min-width: 100px;
 }
 .jbnb-table-column--url{
-  width: 86px;
+  width: 90px;
 }
 .jbnb-table-column--post-age{
   width: 112px;
@@ -83,6 +87,9 @@ html, body {
 .jbnb-pagination__previous-jobs, .jbnb-pagination__next-jobs{
   flex: 0 0 auto;
   visibility: hidden;
+}
+.jbnb-indeed-logo{
+  margin-top: 15px;
 }
 @media screen and (max-width: 600px) {
   .jbnb-header-container h5{

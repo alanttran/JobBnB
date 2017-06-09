@@ -39,7 +39,7 @@ function initMap() {
             animation: google.maps.Animation.DROP,
             title: jobs[i].company,
             //label: labels[labelIndex++ % labels.length],
-            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
+            icon: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png'
 
 
 
@@ -68,7 +68,7 @@ function initMap() {
             });
             
             infowindow.open(this.get('map'), this);
-            marker[this.index].setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+            marker[this.index].setIcon('https://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
             
                
         });
