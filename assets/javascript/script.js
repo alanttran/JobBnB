@@ -5,10 +5,18 @@ var latitude = [];
 var long = [];
 var initialMapP = 0;
 var jobs = [];
+var job;
+var marker = [];
+var preNum = 12;
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+var index2 = 0;
 
 initMap();
 
 function initMap() {
+    marker = [];
+
 
     if (initialMapP === 0) {
         var myLatLng = { lat: 32.7157, lng: -117.1611 };
@@ -16,6 +24,7 @@ function initMap() {
     } else {
 
         var myLatLng = { lat: latitude[0], lng: long[0] };
+
     }
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 9,
@@ -24,20 +33,47 @@ function initMap() {
 
     for (var i = 0; i < latitude.length; i++) {
         myLatLng = { lat: latitude[i], lng: long[i] };
-        var marker = new google.maps.Marker({
+        marker[i] = new google.maps.Marker({
             position: myLatLng,
             map: map,
+            animation: google.maps.Animation.DROP,
+            title: jobs[i].company,
+            //label: labels[labelIndex++ % labels.length],
+            icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
 
-            title: 'Hello World!'
+
+
         });
-        marker.addListener('click', function() {
+
+        marker[i].index = i;
+        var infowindow = null;
+
+        google.maps.event.addListener(marker[i], 'click', function() {
+        
+          //console.log('marker click, this is...', this);
+          map.panTo(marker[this.index].getPosition());
+            
+            if (infowindow) {
+              infowindow.close();
+            }
+            
+           
             map.setZoom(10);
-            map.setCenter(marker.getPosition());
-            var infowindow = new google.maps.InfoWindow({
-                content: "Here's a job"
-            });
-            infowindow.open(marker.get('map'), marker);
-        });
-    }
+            map.setCenter(this.getPosition());
 
+           
+            infowindow = new google.maps.InfoWindow({
+              content: "<strong>" + jobs[this.index].jobtitle + "<br><i>" + jobs[this.index].company + "</i></strong><br>" + jobs[this.index].snippet + "<br>" + jobs[this.index].url,
+              maxWidth: 200
+            });
+            
+            infowindow.open(this.get('map'), this);
+            marker[this.index].setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+            
+               
+        });
+
+    }
+    latitude = [];
+    long = [];
 }

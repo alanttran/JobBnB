@@ -95,7 +95,7 @@ function makeTable() {
 
 var paginationLength;
 var currentPagination = 0;
-var nextJobShow = false;
+var nextJobShow = true;
 var previousJobShow = false;
 
 function makePagination(totalResults){
