@@ -3,12 +3,12 @@ $("#user-search-button").click(function(event) {
     var zip = $('#user-zip-code').val();
     var search = $('#user-job-title').val();
 
-    jobSearch(zip, search);
+    jobSearch(zip, search, 0, 10);
     $('.jbnb-results').show();
 });
 
 // http://api.indeed.com/ads/apisearch?publisher=4604260559721605&v=2&q=java&format=json
-function jobSearch(myLocation, searchTerm) {
+function jobSearch(myLocation, searchTerm, start, end) {
     $.ajax({
         cache: false,
         data: $.extend({
@@ -25,8 +25,8 @@ function jobSearch(myLocation, searchTerm) {
             pageNumber: 2,
             latlong: 1,
         }, {
-            start: 0,
-            end: 10
+            start: start,
+            end: end
         }),
         dataType: 'jsonp',
         type: 'GET',
@@ -93,12 +93,43 @@ function makeTable() {
     };
 };
 
+var paginationLength;
+var currentPagination = 0;
+var nextJobShow = false;
+var previousJobShow = false;
+
 function makePagination(totalResults){
 	console.log('make pagination!');
-	$('.jbnb-pagination').empty();
-	var paginationLength = Math.ceil(totalResults/10);
-	for(var i = 1; i < paginationLength; i++ ){
-		$('.jbnb-pagination').append("<div class = 'jbnb-pagination__item'>" + i + "</div>");
-	}
-	$('.jbnb-pagination > div:first-child').addClass('active');
+	$('.jbnb-pagination__next-jobs').css('visibility', 'visible');
+	paginationLength = Math.ceil(totalResults/10);
 }
+
+$('.jbnb-pagination__previous-jobs').on('click', function(event){
+	event.preventDefault();
+	currentPagination--;
+	jobSearch($('#user-zip-code').val(), $('#user-job-title').val(), currentPagination*10, currentPagination*10+10);
+	
+
+	if(currentPagination === 0){
+		$(this).css('visibility', 'hidden');
+		previousJobShow = false;
+	}
+	if(nextJobShow){
+		$('.jbnb-pagination__next-jobs').css('visibility', 'visible');
+	}
+})
+$('.jbnb-pagination__next-jobs').on('click', function(event){
+	event.preventDefault();
+	currentPagination++;
+	jobSearch($('#user-zip-code').val(), $('#user-job-title').val(), currentPagination*10, currentPagination*10+10);
+	
+	if(!previousJobShow ){
+		$('.jbnb-pagination__previous-jobs').css('visibility', 'visible');
+		previousJobShow = true;
+	}
+	if(currentPagination === paginationLength){
+		$(this).css('visibility', 'hidden');
+		nextJobShow = false;
+
+	}
+})

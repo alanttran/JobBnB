@@ -67,17 +67,12 @@ html, body {
 }
 .jbnb-pagination{
   margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
 }
-.jbnb-pagination__item{
-  display: inline-block;
-  padding: 5px 10px;
-  
-  cursor: pointer;
-}
-.jbnb-pagination__item.active{
-  background: rgb(0,150,136);
-  color: white;
-  border-radius: 9px;
+.jbnb-pagination__previous-jobs, .jbnb-pagination__next-jobs{
+  flex: 0 0 auto;
+  visibility: hidden;
 }
 
 
