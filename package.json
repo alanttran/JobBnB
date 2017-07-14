@@ -1,0 +1,23 @@
+{
+  "name": "jobsbnb",
+  "version": "1.0.0",
+  "description": "Search for jobs based on your location",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanttran/JobBnB.git"
+  },
+  "keywords": [
+    "jobs",
+    "maps"
+  ],
+  "author": "Alan Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanttran/JobBnB/issues"
+  },
+  "homepage": "https://github.com/alanttran/JobBnB#readme"
+}
